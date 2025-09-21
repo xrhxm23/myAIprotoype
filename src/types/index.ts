@@ -74,3 +74,25 @@ export interface AIGenerationRequest {
     avoid_consecutive: string[];
   };
 }
+
+export interface NEPComplianceMetrics {
+  overall_score: number;
+  multidisciplinary_integration: number;
+  art_education_priority: number;
+  physical_education_balance: number;
+  value_based_learning: number;
+  flexible_assessment: number;
+  holistic_development: number;
+}
+
+export interface AITimetableResponse {
+  success: boolean;
+  timetable: TimetableEntry[];
+  metadata: {
+    generation_time: string;
+    nep_compliance: 'low' | 'medium' | 'high';
+    optimization_score: number;
+    multidisciplinary_integration: boolean;
+  };
+  compliance_metrics: NEPComplianceMetrics;
+}

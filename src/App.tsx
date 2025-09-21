@@ -5,6 +5,9 @@ import Layout from './components/Layout';
 import Dashboard from './components/Dashboard';
 import TimetableGrid from './components/TimetableGrid';
 import AIGenerator from './components/AIGenerator';
+import SubjectManager from './components/SubjectManager';
+import TeacherManager from './components/TeacherManager';
+import Settings from './components/Settings';
 
 // Mock data for demonstration
 const mockTimeSlots = [
@@ -59,9 +62,9 @@ function App() {
             } 
           />
           <Route path="/ai-generator" element={<AIGenerator />} />
-          <Route path="/teachers" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-900">Teachers Management</h2><p className="text-gray-600">Coming soon...</p></div>} />
-          <Route path="/subjects" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-900">Subjects Management</h2><p className="text-gray-600">Coming soon...</p></div>} />
-          <Route path="/settings" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-900">Settings</h2><p className="text-gray-600">Coming soon...</p></div>} />
+          <Route path="/teachers" element={<TeacherManager />} />
+          <Route path="/subjects" element={<SubjectManager />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </Layout>
       <Toaster position="top-right" />
